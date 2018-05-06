@@ -19,12 +19,12 @@
     "typescript": "~2.6.1"
   },
   "scripts": {
-    "test": "jest",
+    "test": "yarn compile; jest; yarn check",
     "check": "gts check",
     "clean": "gts clean",
     "compile": "tsc -p .",
     "fix": "gts fix",
-    "start": "node build/src/index.js",
+    "start": "yarn check; yarn compile; node build/src/index.js",
     "prepare": "yarn compile",
     "pretest": "yarn compile",
     "posttest": "yarn check"
