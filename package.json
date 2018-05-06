@@ -1,0 +1,46 @@
+{
+  "name": "hello-ts",
+  "version": "1.0.0",
+  "description": "hello ts",
+  "repository": "https://github.com/hkhamm/hello-ts.git",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "node": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^10.0.4",
+    "gts": "^0.5.4",
+    "jest": "^22.4.3",
+    "ts-jest": "^22.4.5",
+    "typescript": "~2.6.1"
+  },
+  "scripts": {
+    "test": "jest",
+    "check": "gts check",
+    "clean": "gts clean",
+    "compile": "tsc -p .",
+    "fix": "gts fix",
+    "start": "node build/src/index.js",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run check"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}
