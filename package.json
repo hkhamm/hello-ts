@@ -25,9 +25,9 @@
     "compile": "tsc -p .",
     "fix": "gts fix",
     "start": "node build/src/index.js",
-    "prepare": "npm run compile",
-    "pretest": "npm run compile",
-    "posttest": "npm run check"
+    "prepare": "yarn compile",
+    "pretest": "yarn compile",
+    "posttest": "yarn check"
   },
   "jest": {
     "transform": {
